@@ -1,0 +1,24 @@
+<h2 style="background-color: red; border-radius: 5px; color: white;text-align: center; ">View Item List</h2>
+<table class="table">
+   
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Item Name</th>
+        <th>Item Price</th>
+        <th>Action</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of apiResponse">
+        <td>{{ item.id }}</td>
+        <td>{{ item.itemName }}</td>
+        <td>{{ item.itemPrice }}</td>
+       
+        <td><button class="btn btn-danger" (click)="deleteUser(item._id)">Delete</button> 
+        <button class="btn btn-success" (click)="updateUser(item._id)" style="margin-left: 5px;">Update</button></td>
+      </tr>
+    </tbody>
+  </table>
+  

@@ -1,0 +1,25 @@
+<form [formGroup]="userForm" (ngSubmit)="submitForm()" class="form-container">
+    <h2 style="background-color: red; border-radius: 5px; color: white;text-align: center; ">Add Item</h2>
+    <div class="form-group">
+      <label for="id">Item ID:</label>
+      <input type="text" id="id" name="id"  class="form-control" formControlName="id" (keypress)="numericOnly($event)">
+    </div>
+
+    <div class="form-group">
+      <label for="firstName">Item Name:</label>
+      <input type="text" id="itemName" name="itemName"  class="form-control" formControlName="itemName" (keypress)="alphaOnly($event)">
+    </div>
+
+    <div class="form-group">
+      <label for="lastName"> Item Price:</label>
+      <input type="text" id="itemPrice" name="itemPrice" class="form-control" formControlName="itemPrice">
+    </div>
+
+    
+
+    
+    <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
+    <button type="submit" class="btn">Submit</button>
+    
+  </form>
+  
